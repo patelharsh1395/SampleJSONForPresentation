@@ -9,17 +9,52 @@
 import Foundation
 
 
-class JsonData : Decodable
+class JsonData : Codable
 {
-    var title : String?
-    var body : String?
-    
+    var Title : String
+    var Body : String
+   
     
     enum CodingKeys : String , CodingKey
     {
-        case title = "Title"
-        case body = "Body"
+        case Title = "title"
+        case Body = "body"
     }
+    
+    
+    
+    
+    
+}
+
+extension JsonData
+{
+   static func getData() -> [JsonData]
+    {
+    
+        let url = "https://jsonplaceholder.typicode.com/posts"
+        var temp : [JsonData] = []
+            URLSession.shared.dataTask(with: URL(string: url)!) { (data, res, err) in
+            
+            guard let dt = data  else {return}
+             let decoder = JSONDecoder()
+            do{
+               
+                temp.append(contentsOf: try  decoder.decode([JsonData].self, from: dt))
+               // print(try  decoder.decode([JsonData].self, from: dt).count)
+                //  print(self.data[0].body)
+            }
+            catch
+            {
+                print("\(error)")
+            }
+            
+            }.resume()
+        
+        
+        return temp
+    }
+    
 }
 
 

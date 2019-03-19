@@ -10,23 +10,29 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
-    var data : [JsonData] = ()
+    
+    
+  //  var data1 : [JsonData] = [JsonData("Harsh","patel"), JsonData("Mahendra","Singh")]
+    var data : [JsonData] = []
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getJsonData()
+        self.data.append(contentsOf: JsonData.getData())
         self.tableview.dataSource = self
         self.tableview.delegate = self
         
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data!.count
+    
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : CustomCellTableViewCell  = tableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath) as! CustomCellTableViewCell
-        cell.titleText.text = self.data![indexPath.row].title
-        cell.descText.text = self.data![indexPath.row].body
+        let cell : CustomCellTableViewCell  = tableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath) as! CustomCellTableViewCell
+        print(self.data.count,"counting")
+        cell.titleText.text = self.data[indexPath.row].Title
+        cell.descText.text = self.data[indexPath.row].Body
 //        cell.textLabel?.text = self.data![indexPath.row].title
 //        cell.description = self.data![indexPath.row].body
         
@@ -34,30 +40,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         return cell
     }
-    
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       
         return 400
     }
-    func getJsonData()
-    {
-        let url = "https://jsonplaceholder.typicode.com/posts"
+   
     
-        URLSession.shared.dataTask(with: URL(string: url)!) { (data, res, err) in
-                print("inside block")
-            guard let dt = data  else {return}
-            var decoder = JSONDecoder()
-            do{
-                
-            
-           self.data = try  decoder.decode([JsonData].self, from: dt)
-            }
-            catch
-            {
-                print("\(error)")
-            }
-        
-        }.resume()
-    }
 
 }
 
