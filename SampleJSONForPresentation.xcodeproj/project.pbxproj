@@ -14,6 +14,8 @@
 		9B8B2D2E22406D0600CBD154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B2D2C22406D0600CBD154 /* LaunchScreen.storyboard */; };
 		9B8B2D3922406D0600CBD154 /* SampleJSONForPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D3822406D0600CBD154 /* SampleJSONForPresentationTests.swift */; };
 		9B8B2D4422406D0600CBD154 /* SampleJSONForPresentationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D4322406D0600CBD154 /* SampleJSONForPresentationUITests.swift */; };
+		9B8B2D5222406D2E00CBD154 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D5122406D2E00CBD154 /* JsonData.swift */; };
+		9B8B2D9622407C4D00CBD154 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9B8B2D3F22406D0600CBD154 /* SampleJSONForPresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleJSONForPresentationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8B2D4322406D0600CBD154 /* SampleJSONForPresentationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleJSONForPresentationUITests.swift; sourceTree = "<group>"; };
 		9B8B2D4522406D0600CBD154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8B2D5122406D2E00CBD154 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				9B8B2D2A22406D0600CBD154 /* Assets.xcassets */,
 				9B8B2D2C22406D0600CBD154 /* LaunchScreen.storyboard */,
 				9B8B2D2F22406D0600CBD154 /* Info.plist */,
+				9B8B2D5122406D2E00CBD154 /* JsonData.swift */,
+				9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */,
 			);
 			path = SampleJSONForPresentation;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8B2D5222406D2E00CBD154 /* JsonData.swift in Sources */,
 				9B8B2D2622406D0500CBD154 /* ViewController.swift in Sources */,
+				9B8B2D9622407C4D00CBD154 /* CustomCellTableViewCell.swift in Sources */,
 				9B8B2D2422406D0500CBD154 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
