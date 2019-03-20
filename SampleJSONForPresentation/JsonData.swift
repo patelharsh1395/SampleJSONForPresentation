@@ -29,30 +29,35 @@ class JsonData : Codable
 
 extension JsonData
 {
-   static func getData() -> [JsonData]
+    static func getData(delegate: NetworkCallBack)
     {
     
         let url = "https://jsonplaceholder.typicode.com/posts"
         var temp : [JsonData] = []
+        
             URLSession.shared.dataTask(with: URL(string: url)!) { (data, res, err) in
             
             guard let dt = data  else {return}
+            
              let decoder = JSONDecoder()
             do{
                
                 temp.append(contentsOf: try  decoder.decode([JsonData].self, from: dt))
                // print(try  decoder.decode([JsonData].self, from: dt).count)
+               
                 //  print(self.data[0].body)
+                delegate.onSuccess(data: temp)
             }
             catch
             {
-                print("\(error)")
+                delegate.onFail(error: err!)
             }
             
             }.resume()
         
         
-        return temp
+        
+        
     }
     
 }

@@ -16,6 +16,7 @@
 		9B8B2D4422406D0600CBD154 /* SampleJSONForPresentationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D4322406D0600CBD154 /* SampleJSONForPresentationUITests.swift */; };
 		9B8B2D5222406D2E00CBD154 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D5122406D2E00CBD154 /* JsonData.swift */; };
 		9B8B2D9622407C4D00CBD154 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */; };
+		A1DE753E2241A40000F0F8D0 /* NetworkCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE753D2241A40000F0F8D0 /* NetworkCallBack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9B8B2D4522406D0600CBD154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B8B2D5122406D2E00CBD154 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		A1DE753D2241A40000F0F8D0 /* NetworkCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallBack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9B8B2D2F22406D0600CBD154 /* Info.plist */,
 				9B8B2D5122406D2E00CBD154 /* JsonData.swift */,
 				9B8B2D9522407C4D00CBD154 /* CustomCellTableViewCell.swift */,
+				A1DE753D2241A40000F0F8D0 /* NetworkCallBack.swift */,
 			);
 			path = SampleJSONForPresentation;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				9B8B2D5222406D2E00CBD154 /* JsonData.swift in Sources */,
 				9B8B2D2622406D0500CBD154 /* ViewController.swift in Sources */,
 				9B8B2D9622407C4D00CBD154 /* CustomCellTableViewCell.swift in Sources */,
+				A1DE753E2241A40000F0F8D0 /* NetworkCallBack.swift in Sources */,
 				9B8B2D2422406D0500CBD154 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

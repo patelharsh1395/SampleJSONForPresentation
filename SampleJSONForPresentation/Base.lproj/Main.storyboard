@@ -64,9 +64,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descText" destination="Ypa-OZ-Igv" id="g3d-9q-h0D"/>
-                                            <outlet property="descriptiontext" destination="Ypa-OZ-Igv" id="tgs-hk-Zc9"/>
                                             <outlet property="titleText" destination="bXZ-vF-lCg" id="0as-vM-dhf"/>
-                                            <outlet property="titletext" destination="bXZ-vF-lCg" id="Moe-Xb-bsG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

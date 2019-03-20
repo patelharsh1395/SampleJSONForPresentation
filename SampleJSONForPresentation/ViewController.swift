@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, NetworkCallBack {
+   
     
+
     
     
   //  var data1 : [JsonData] = [JsonData("Harsh","patel"), JsonData("Mahendra","Singh")]
@@ -17,9 +19,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data.append(contentsOf: JsonData.getData())
+       
         self.tableview.dataSource = self
         self.tableview.delegate = self
+        
+        JsonData.getData(delegate: self)
         
         
     }
@@ -47,6 +51,17 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
    
     
-
+    func onSuccess(data: [JsonData]) {
+        self.data.append(contentsOf: data)
+        DispatchQueue.main.async {
+            print("COUNT : \(data.count)")
+            self.tableview.reloadData()
+        }
+        
+    }
+    
+    func onFail(error: Error) {
+        print("ERROR : \(error)")
+    }
 }
 
